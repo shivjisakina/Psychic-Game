@@ -1,45 +1,47 @@
 
-// Our array of possible computer choices.
+//
 var alphabet = ["a", "b", "c", "d","e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-// Variables for tracking our wins, losses and ties. They begin at 0.
+//
 wins = 0,
 losses = 0,
 guessesLeft = 10;
 
-// When the user presses a key, it will run the following function...
+// When the user presses a key, its runs the function(game)
 document.onkeyup = function(game) {
 
-    // Determine which key was pressed
+    // The key that has been pressed will show up here
     var userGuess = game.key;
 
-    // Sets the computerGuess variable equal to a random choice from the computerChoice array.
+    // This makes the computer generate a random alphabet and logs it in the console
     var computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
     console.log("user guess", userGuess, "computer alphabet", computerGuess);
 
+    // If the users guess is the sae value and type as the computer generated letter, the wins increase by 1
     if (userGuess === computerGuess) {
         wins++;
     }
 
+    // if the users guess doesnt = the computers guess and they've used all of their guesses, they get a loss
     else if (userGuess != computerGuess) {
         if (guessesLeft > 0) {
             guessesLeft--;
+        }
         else (userGuess != computerGuess); {
                 losses++;
-            }
 
         }
 
 
 
-        // Here we create the HTML that will be injected into our div and displayed on the page.
+        // This combines the html and js variables that will show up on the page
         var html = "<p>Clck on any key to begin</p>" +
             "<p>Wins: " + wins + "</p>" +
             "<p>Losses: " + losses + "</p>" +
             "<p>Guesses left: " + guessesLeft + "</p>" +
             "<p>Your guesses so far: " + userGuess + "</p>";
 
-        // Injecting the HTML we just created into our div and updating the game information on our page.
+        // Using innerHTML so declare the variable values in the game.
         document.querySelector("#game").innerHTML = html;
 
     };

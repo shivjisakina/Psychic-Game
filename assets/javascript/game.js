@@ -1,3 +1,5 @@
+/* this was my first attempt but i started over
+
 //variables
 
 var alphabet = ["a", "b", "c", "d","e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -28,18 +30,20 @@ var wins = 0,
 
 
 
-    /*
+
     document.getElementById("#wins").innerHTML += wins;
     document.getElementById("#losses").innerHTML += losses;
     document.getElementById("#guessesleft").innerHTML += guessesLeft;
-    document.getElementById("#userguess").innerHTML += userGuess; */
+    document.getElementById("#userguess").innerHTML += userGuess;
 
 
-//if else statements
+    if else statements
 
     if (userGuess === alphabet) {
         wins++
-    }
+    };
 
 
 }
+
+*\
