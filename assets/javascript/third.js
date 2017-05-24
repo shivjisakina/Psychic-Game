@@ -21,6 +21,7 @@ document.onkeyup = function(game) {
 
     // If the users guess is the same value and type as the computer generated letter, the wins increase by 1
     if (userGuess === computerGuess) {
+        console.log("you won a point");
         wins++;
         initateGuess();
     }
@@ -35,19 +36,23 @@ document.onkeyup = function(game) {
         }
         // Losses increase if all 10 guesses are wrong
         else if (guessesLeft === 0) {
+            console.log("you lost a point")
             losses++;
             console.log("guessesleft equal to 0", guessesLeft);
             initateGuess();
         }
 
+
+
     }
-    /* this changed the losses everytime instead of every 10 times
+    /* this changed the losses every time instead of every 10 times
      else (userGuess !== computerGuess); {
 
      losses++;
 
      }
      */
+
 
 
     // This combines the html and js variables that will show up on the page

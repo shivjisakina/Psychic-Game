@@ -1,12 +1,10 @@
 # Psychic-Game
 
 
-### Instructions
+### Welcome to my psychic game!
 
 * 
 
-```
-```
 
 *
  
