@@ -6,6 +6,8 @@ var alphabet = ["a", "b", "c", "d","e", "f", "g", "h", "i", "j", "k", "l", "m", 
     wins = 0,
     losses = 0;
 var guessesLeft = 10;
+    /*
+    userChoices = []; */
 
 
 // This makes the computer generate a random alphabet and logs it in the console
@@ -24,13 +26,19 @@ document.onkeyup = function(game) {
         console.log("you won a point");
         wins++;
         initateGuess();
-    }
+        /* pushing the variable into the game wouldnt work
+        userChoices = [];
+        var alphabet = ["a", "b", "c", "d","e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+        console.log(userChoices)*/
+
+            }
 
     // if the users guess doesn't = the computers guess and they've used all of their guesses, they get a loss
     else if (userGuess !== computerGuess) {
         if (guessesLeft !== 0) {
             guessesLeft--;
             console.log("guesses left ", guessesLeft);
+
 
 
         }
@@ -41,8 +49,6 @@ document.onkeyup = function(game) {
             console.log("guessesleft equal to 0", guessesLeft);
             initateGuess();
         }
-
-
 
     }
     /* this changed the losses every time instead of every 10 times
@@ -64,6 +70,9 @@ document.onkeyup = function(game) {
 
     // Using innerHTML so declare the variable values in the game.
     document.querySelector("#game").innerHTML = html;
+
+    //pushes the typed values into array
+
 
 
 }
