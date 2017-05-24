@@ -27,10 +27,20 @@ document.onkeyup = function(game) {
         if (guessesLeft => 0) {
             guessesLeft--;
         }
-        else (userGuess != computerGuess); {
-                losses++;
+
+        // Losses increase if all 10 guesses are wrong
+        if (guessesLeft === 0) {
+            losses++;
+        }
+
+
+        /* this changed the losses everytime instead of every 10 times
+        else (userGuess !== computerGuess); {
+
+             losses++;
 
         }
+         */
 
 
 
