@@ -66,6 +66,6 @@ document.onkeyup = function(game) {
     function initateGuess(){
         computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
         guessesLeft = 10;
-        console.log("New guess begins", computerGuess);
+        console.log("New guess begins:", computerGuess);
 
 }
