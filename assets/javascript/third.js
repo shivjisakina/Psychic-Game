@@ -35,7 +35,7 @@ document.onkeyup = function(game) {
 
 
         // This combines the html and js variables that will show up on the page
-        var html = "<p>Clck on any key to begin</p>" +
+        var html = "<h1>The Psychic Game</h1>" +
             "<p>Wins: " + wins + "</p>" +
             "<p>Losses: " + losses + "</p>" +
             "<p>Guesses left: " + guessesLeft + "</p>" +
