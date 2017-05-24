@@ -1,7 +1,7 @@
 //variables
 
 var alphabet = ["a", "b", "c", "d","e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-// this wont work because it has to be random letter = ("l", "s", "f", "t"),
+// testing]s = ("l", "s", "f", "t"),
 
 
 
@@ -13,23 +13,33 @@ var wins = 0,
     losses = 0,
     guessesLeft = 10;
 
-var userGuess = prompt("Enter your guess here "); {
-    console.log("your choice was " + userGuess)
-}
+
+    document.onkeyup = function (event) {
+
+
+    var userGuess = event.key;
 
 
 
-document.onkeyup = function (event) {
-    
-};
 
+
+
+
+
+
+
+    /*
+    document.getElementById("#wins").innerHTML += wins;
+    document.getElementById("#losses").innerHTML += losses;
+    document.getElementById("#guessesleft").innerHTML += guessesLeft;
+    document.getElementById("#userguess").innerHTML += userGuess; */
 
 
 //if else statements
 
     if (userGuess === alphabet) {
         wins++
+    }
+
+
 }
-
-    
-
