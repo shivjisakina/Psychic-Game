@@ -1,1 +1,15 @@
 # Psychic-Game
+
+
+### Instructions
+
+* 
+
+```
+```
+
+*
+ 
+ 
+
+* 

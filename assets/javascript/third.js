@@ -19,13 +19,13 @@ document.onkeyup = function(game) {
     console.log("user guess", userGuess, "computer alphabet", computerGuess);
 
 
-    // If the users guess is the sae value and type as the computer generated letter, the wins increase by 1
+    // If the users guess is the same value and type as the computer generated letter, the wins increase by 1
     if (userGuess === computerGuess) {
         wins++;
         initateGuess();
     }
 
-    // if the users guess doesnt = the computers guess and they've used all of their guesses, they get a loss
+    // if the users guess doesn't = the computers guess and they've used all of their guesses, they get a loss
     else if (userGuess !== computerGuess) {
         if (guessesLeft !== 0) {
             guessesLeft--;
@@ -62,10 +62,10 @@ document.onkeyup = function(game) {
 
 
 }
-
-function initateGuess(){
-    computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
-    guessesLeft = 10;
-    console.log("New guess begins", computerGuess);
+    // this makes it easier to reset the value without having to put it in every if/else statement
+    function initateGuess(){
+        computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
+        guessesLeft = 10;
+        console.log("New guess begins", computerGuess);
 
 }
