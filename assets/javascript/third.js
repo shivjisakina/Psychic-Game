@@ -1,8 +1,8 @@
 
-//
+// Declaring all of the variables in the array
 var alphabet = ["a", "b", "c", "d","e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-//
+// Declaring the wins, losses, and guessesLeft variables
 wins = 0,
 losses = 0,
 guessesLeft = 10;
@@ -24,7 +24,7 @@ document.onkeyup = function(game) {
 
     // if the users guess doesnt = the computers guess and they've used all of their guesses, they get a loss
     else if (userGuess != computerGuess) {
-        if (guessesLeft > 0) {
+        if (guessesLeft => 0) {
             guessesLeft--;
         }
         else (userGuess != computerGuess); {
